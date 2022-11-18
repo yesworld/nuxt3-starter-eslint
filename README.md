@@ -1,14 +1,13 @@
-# Nuxt 3 Starter
+# Nuxt 3 RC 9 - Starter
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
 ## Features
 
 - [x] 🌊 [Tailwindcss v3](https://tailwindcss.com/)
-- [ ] 🍍 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
-- [ ] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
+- [x] 🍍 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
+- [x] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
 - [ ] 🥸 [Mocking Service Worker (MSW)](https://mswjs.io/)
-- [x] 📱 Mobile Detect Plugin
 - [x] ✨ Eslint & Prettier
 - [ ] 🐕 Husky & Commitlint
 
