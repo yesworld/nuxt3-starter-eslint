@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  @apply text-blue-500;
+}
+
+.content {
+  @apply lg:container px-2 sm:px-4 md:px-10 lg:px-0;
+}
