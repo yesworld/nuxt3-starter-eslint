@@ -1,4 +1,4 @@
-import path from 'path'
+import { resolve } from 'path'
 import { defineNuxtModule } from '@nuxt/kit'
 
 export default defineNuxtModule({
@@ -10,7 +10,7 @@ export default defineNuxtModule({
       pages.push({
         name: 'home',
         path: '/',
-        file: path.resolve(__dirname, './pages/index.vue'),
+        file: resolve(__dirname, './pages/index.vue'),
       })
     },
 
@@ -18,7 +18,7 @@ export default defineNuxtModule({
     'components:dirs'(dirs) {
       // Add ./components dir to the list
       dirs.push({
-        path: path.resolve(__dirname, './components'),
+        path: resolve(__dirname, './components'),
       })
     },
   },

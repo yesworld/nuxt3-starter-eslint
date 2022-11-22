@@ -1,10 +1,10 @@
 <template>
-  <div class="show-more-less" :class="{opened: isOpened}">
-    <div class="text" ref="$text">
+  <div class="show-more-less" :class="{ opened: isOpened }">
+    <div ref="$text" class="text">
       <slot />
     </div>
     <div class="btn-wrapper">
-      <a class="btn-gray" @click="onClick">{{!isOpened ? 'Показать еще' : 'Скрыть'}}</a>
+      <a class="btn-gray" @click="onClick">{{ !isOpened ? 'Показать еще' : 'Скрыть' }}</a>
       <span class="grey-line"></span>
     </div>
   </div>
@@ -32,9 +32,8 @@ const onClick = () => {
 
 <style lang="scss">
 .show-more-less {
-
   &.opened .text {
-    max-height:v-bind(heightItem);
+    max-height: v-bind(heightItem);
 
     &:before {
       display: none;
@@ -49,14 +48,14 @@ const onClick = () => {
   }
 
   .text:before {
-    @apply bg-gradient-to-t from-white dark:from-dirty;
-    content:'';
-    position:absolute;
+    @apply dark:from-dirty bg-gradient-to-t from-white;
+    content: '';
+    position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     height: 49px;
-    z-index:1;
+    z-index: 1;
   }
 
   .btn-wrapper {

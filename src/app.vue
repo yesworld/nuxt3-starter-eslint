@@ -1,7 +1,9 @@
 <template>
-  <NuxtLayout>
+  <NavTopMenu />
+  <NuxtLayout class="py-20">
     <NuxtPage />
   </NuxtLayout>
+
   <ClientOnly>
     <ModalCookieAccept />
   </ClientOnly>

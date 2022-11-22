@@ -31,6 +31,34 @@ export default defineNuxtConfig({
     strict: true,
   },
 
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'ru',
+      },
+      // https://v3.nuxtjs.org/api/configuration/nuxt.config#head
+      title: config.title,
+      titleTemplate: 'site - %s',
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: config.description },
+        { property: 'og:locale', content: 'ru_RU' },
+        { property: 'og:url', content: config.baseUrl },
+        { property: 'og:site_name', content: config.siteName },
+        { property: 'og:image', content: config.logo },
+        { property: 'og:image:width', content: '200' },
+        { property: 'og:image:height', content: '45' },
+        { property: 'og:image:alt', content: config.title },
+        { property: 'twitter:card', content: 'summary_large_image, summary' },
+        { property: 'twitter:description', content: config.description },
+        { property: 'twitter:title', content: config.title },
+        { property: 'twitter:site', content: config.baseUrl },
+        { property: 'twitter:image', content: config.logo },
+      ],
+      link: [{ rel: 'shortcut icon', href: '/logo.svg', type: 'image/x-icon' }],
+    },
+  },
+
   postcss: {
     plugins: {
       tailwindcss: {},
