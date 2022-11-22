@@ -4,7 +4,16 @@ import viteCompression from 'vite-plugin-compression'
 import config from './src/config/env.config'
 
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', '@nuxt/image-edge', 'nuxt-schema-org', '@pinia/nuxt'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+    '@nuxt/image-edge',
+    'nuxt-schema-org',
+    '@pinia/nuxt',
+
+    // Custom modules
+    './src/modules/common',
+  ],
   css: [
     'primevue/resources/themes/saga-blue/theme.css',
     'primevue/resources/primevue.css',

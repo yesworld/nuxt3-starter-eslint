@@ -1,4 +1,4 @@
-# Nuxt 3 RC 9 - Starter
+# Nuxt 3 RC 9 - Starter modular template
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
@@ -7,9 +7,10 @@ Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 - [x] 🌊 [Tailwindcss v3](https://tailwindcss.com/)
 - [x] 🍍 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
 - [x] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
-- [ ] 🥸 [Mocking Service Worker (MSW)](https://mswjs.io/)
 - [x] ✨ Eslint & Prettier
-- [ ] 🐕 Husky & Commitlint
+- [ ] 🐕 [Husky](https://typicode.github.io/husky/#/?id=features) & [Commitlint](https://github.com/conventional-changelog/commitlint)
+- [ ] 🥸 [Mocking Service Worker (MSW)](https://mswjs.io/)
+- [ ] 🤖 Vitest
 
 ## Setup
 
