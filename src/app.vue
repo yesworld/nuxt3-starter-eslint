@@ -1,12 +1,14 @@
 <template>
-  <NavTopMenu />
-  <NuxtLayout class="py-20">
-    <NuxtPage />
-  </NuxtLayout>
+  <div>
+    <NavTopMenu />
+    <NuxtLayout class="py-20">
+      <NuxtPage />
+    </NuxtLayout>
 
-  <ClientOnly>
-    <ModalCookieAccept />
-  </ClientOnly>
+    <ClientOnly>
+      <ModalCookieAccept />
+    </ClientOnly>
+  </div>
 </template>
 
 <script lang="ts" setup>

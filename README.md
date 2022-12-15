@@ -8,8 +8,6 @@ Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 - [x] 🍍 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
 - [x] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
 - [x] ✨ Eslint & Prettier
-- [ ] 🐕 [Husky](https://typicode.github.io/husky/#/?id=features) & [Commitlint](https://github.com/conventional-changelog/commitlint)
-- [ ] 🥸 [Mocking Service Worker (MSW)](https://mswjs.io/)
 - [ ] 🤖 Vitest
 
 ## Setup
