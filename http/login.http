@@ -1,0 +1,16 @@
+### Login ###
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "password": "{{pass}}"
+}
+
+> {% client.global.set("token", response.body.JWT); %}
+
+### Get my accont ###
+GET {{host}}/api/auth/me
+Authorization: JWT {{token}}
+
+> {% client.global.set("profile", response.body.profile); %}

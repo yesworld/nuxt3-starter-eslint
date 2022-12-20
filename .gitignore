@@ -7,3 +7,4 @@ node_modules
 dist
 .idea
 .env.local
+http/http-client.env.json
