@@ -44,7 +44,7 @@ export default defineNuxtConfig({
       },
       // https://v3.nuxtjs.org/api/configuration/nuxt.config#head
       title: config.title,
-      titleTemplate: 'site - %s',
+      titleTemplate: `%s | ${config.siteName}`,
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: config.description },

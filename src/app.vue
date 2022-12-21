@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavTopMenu />
-    <NuxtLayout class="py-20">
+    <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
 
@@ -29,16 +29,6 @@ useSchemaOrg([
     email: config.email,
     name: config.siteName,
     description: config.description,
-    address: {
-      addressLocality: config.address.locality,
-      postalCode: config.address.code,
-      streetAddress: config.address.street,
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: config.contact.telephone,
-      contactType: config.contact.contactType,
-    },
   }),
 ])
 </script>

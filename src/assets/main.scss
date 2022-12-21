@@ -2,26 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-@mixin bg-body {
-  @apply bg-white dark:bg-dark
-    text-black/95 dark:text-[#ebf4f1]
-  ;
+@mixin style-text {
+  @apply text-black/95 dark:text-[#ebf4f1];
+}
+@mixin style-bg {
+  @apply bg-white dark:bg-dark;
 }
 body {
-  @include bg-body;
+  @include style-text;
+  @include style-bg;
 }
 
 h1 {
-  @apply text-blue-500;
+  @include style-text;
+  @apply text-dark text-4xl;
 }
 
 .content {
   @apply px-2 sm:px-4 md:px-10 lg:container lg:px-0;
 }
 
+.row {
+  @apply grid grid-cols-12 gap-4;
+}
+
+hr {
+  @apply border-fourth my-10;
+  border-top-width: 10px;
+  width: 35%;
+}
+
+/* Modal */
+.modal {
+  @include style-bg;
+  @apply rounded border border-secondary p-4;
+  z-index: 999;
+}
+
 /* PrimeVue - Form */
 button.p-button {
-  @apply bg-secondary text-secondary-200 border-secondary
+  @apply bg-secondary border-secondary
     hover:bg-secondary-200 hover:text-secondary #{!important}
   ;
 }
