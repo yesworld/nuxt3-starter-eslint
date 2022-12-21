@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@mixin bg-body{
+@mixin bg-body {
   @apply bg-white dark:bg-dark
-  text-black/95 dark:text-[#ebf4f1]
+    text-black/95 dark:text-[#ebf4f1]
   ;
 }
 body {
@@ -19,3 +19,9 @@ h1 {
   @apply px-2 sm:px-4 md:px-10 lg:container lg:px-0;
 }
 
+/* PrimeVue - Form */
+button.p-button {
+  @apply bg-secondary text-secondary-200 border-secondary
+    hover:bg-secondary-200 hover:text-secondary #{!important}
+  ;
+}

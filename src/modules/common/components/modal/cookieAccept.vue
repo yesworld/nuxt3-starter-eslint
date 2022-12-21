@@ -1,12 +1,12 @@
 <template>
   <Teleport to="body">
-    <div v-if="isOpened" class="modal rounded border border-primary p-4">
+    <div v-if="isOpened" class="modal">
       <p>
-        MixPoint использует файлы cookie с целью персонализации сервисов и повышения удобства пользования веб-сайтом.
+        We use cookies on our website to give you the most relevant experience by remembering your preferences and
+        repeat visits. By clicking "Accept", you consent to the use of ALL the cookies.
       </p>
-      <p>Пользовательское соглашение, политика конфиденциальности</p>
-      <p>Если вы не хотите использовать файлы cookie, измените настройки браузера.</p>
-      <button class="btn green small" @click="onClick">Спасибо, понятно</button>
+
+      <Button label="Accept" @click="onClick" />
     </div>
   </Teleport>
 </template>
@@ -28,10 +28,8 @@ const onClick = () => {
 
 <style lang="scss" scoped>
 .modal {
-  @apply bottom-5 right-5 ml-5 md:bottom-[7%]
-    md:right-[5%];
+  @apply bottom-5 right-5 ml-5 md:bottom-[3%] md:right-[3%];
   position: fixed;
-  z-index: 999;
 
   p {
     @apply pb-3 text-base;
