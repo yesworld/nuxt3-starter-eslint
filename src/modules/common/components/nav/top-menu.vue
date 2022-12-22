@@ -3,7 +3,7 @@
     <nav class="content flex items-center justify-between shadow-gray-500/10">
       <div class="flex items-center justify-center">
         <NuxtLink to="/" class="mr-5">
-          <img src="/logo.svg" class="h-10 fill-primary dark:fill-primary-200 sm:w-auto" />
+          <img src="/logo.svg" class="dark:fill-primary-200 h-10 fill-primary sm:w-auto" />
         </NuxtLink>
         <NavBtnChangeTheme />
       </div>
@@ -11,6 +11,7 @@
       <div class="flex items-center justify-center">
         <NuxtLink to="/" class="mr-5">Home</NuxtLink>
         <NuxtLink to="/about" class="mr-5">About</NuxtLink>
+        <Button class="p-button-success">Login</Button>
       </div>
     </nav>
   </div>

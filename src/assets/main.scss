@@ -41,7 +41,8 @@ hr {
 
 /* PrimeVue - Form */
 button.p-button {
-  @apply bg-secondary border-secondary
-    hover:bg-secondary-200 hover:text-secondary #{!important}
-  ;
+  background-color: #2196F3;
+  //@apply bg-secondary border-secondary
+  //  hover:bg-secondary-200 hover:text-secondary #{!important}
+  //;
 }
