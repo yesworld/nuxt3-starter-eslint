@@ -1,0 +1,32 @@
+/* PrimeVue - Form */
+.p-buttonset {
+  display: flex;
+  width: 100%;
+  .p-button {
+    @apply basis-2/6; // 33.33333%
+
+    .p-button-warning{
+      color: #d59f18;
+    }
+  }
+  .p-button:not(:last-child) {
+    border-right: 1px solid;
+  }
+}
+
+button.p-button {
+  background-color: #2196F3;
+  //@apply bg-secondary border-secondary
+  //  hover:bg-secondary-200 hover:text-secondary #{!important}
+  //;
+
+  html.dark &.p-button-danger {
+    background-color: #ff000026;
+  }
+  html.dark &.p-button-warning {
+    background-color: #edff001a;
+  }
+  html.dark &.p-button-success {
+    background-color: #4ebb0021;
+  }
+}

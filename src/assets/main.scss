@@ -1,13 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "variable";
+@import "primevue";
 
-@mixin style-text {
-  @apply text-black/95 dark:text-[#ebf4f1];
-}
-@mixin style-bg {
-  @apply bg-white dark:bg-dark;
-}
 body {
   @include style-text;
   @include style-bg;
@@ -37,19 +33,4 @@ hr {
   @include style-bg;
   @apply rounded border border-secondary p-4;
   z-index: 999;
-}
-
-/* PrimeVue - Form */
-.p-buttonset {
-  display: flex;
-  width: 100%;
-  .p-button {
-    flex-basis: 33.33%;
-  }
-}
-button.p-button {
-  background-color: #2196F3;
-  //@apply bg-secondary border-secondary
-  //  hover:bg-secondary-200 hover:text-secondary #{!important}
-  //;
 }

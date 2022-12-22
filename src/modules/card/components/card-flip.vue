@@ -34,26 +34,17 @@ const onClick = (n: any) => {
 </script>
 
 <style lang="scss">
+@import '@/assets/variable.scss';
 $primary: hsl(222, 80%, 50%);
-@mixin mobile($size: 640px) {
-  @media screen and (max-width: $size) {
-    @content;
-  }
-}
 
 .card {
-  color: inherit;
   cursor: pointer;
   width: 300px;
   height: 400px;
   perspective: 1000px;
-  margin: 1rem;
-  position: relative;
   user-select: none;
-  @include mobile(800px) {
-    width: calc(50% - 2rem);
-  }
-  @include mobile(500px) {
+
+  @include mobile(400px) {
     width: 100%;
   }
 
@@ -67,6 +58,7 @@ $primary: hsl(222, 80%, 50%);
 
   .front,
   .back {
+    @include style-bg;
     display: flex;
     border-radius: 6px;
     background-position: center;
@@ -112,7 +104,6 @@ $primary: hsl(222, 80%, 50%);
     transform: rotateY(-180deg);
     flex-direction: column;
     justify-content: space-between;
-    //padding: 0 2em;
   }
 
   //&.flip:hover {
