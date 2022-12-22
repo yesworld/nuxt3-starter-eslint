@@ -13,6 +13,7 @@ export default defineNuxtConfig({
 
     // Custom modules
     './src/modules/common',
+    './src/modules/card',
   ],
   css: [
     'primevue/resources/themes/saga-blue/theme.css',

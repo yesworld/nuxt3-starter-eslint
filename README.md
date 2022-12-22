@@ -2,6 +2,8 @@
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
+[Icons](https://www.primefaces.org/diamond/icons.xhtml)
+
 ## Features
 
 - [x] 🌊 [Tailwindcss v3](https://tailwindcss.com/)

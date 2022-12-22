@@ -40,6 +40,13 @@ hr {
 }
 
 /* PrimeVue - Form */
+.p-buttonset {
+  display: flex;
+  width: 100%;
+  .p-button {
+    flex-basis: 33.33%;
+  }
+}
 button.p-button {
   background-color: #2196F3;
   //@apply bg-secondary border-secondary

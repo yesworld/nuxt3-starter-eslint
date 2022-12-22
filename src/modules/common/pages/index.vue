@@ -3,7 +3,7 @@
     <section class="main">
       <div class="content py-20">
         <div class="row">
-          <div class="col-span-12 md:col-span-6">
+          <div class="col-span-12 flex flex-col justify-center md:col-span-6">
             <h1>{{ title }}</h1>
             <hr />
             <p class="text-2xl">
@@ -12,7 +12,7 @@
           </div>
 
           <div class="col-span-12 md:col-span-6">
-            Image or CardsFlip
+            <CardFlip />
           </div>
         </div>
       </div>
@@ -39,9 +39,13 @@ useHead({
   position: relative;
 
   .content {
-    height: 90%;
+    height: 100%;
     display: flex;
     align-items: center;
+
+    .row {
+      @apply gap-10;
+    }
   }
   h1 {
     @apply text-7xl;
