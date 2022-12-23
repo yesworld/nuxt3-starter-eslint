@@ -8,6 +8,7 @@
     <ClientOnly>
       <ModalCookieAccept />
     </ClientOnly>
+    <NavTheFooter />
   </div>
 </template>
 

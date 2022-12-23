@@ -11,11 +11,20 @@ body {
 
 h1 {
   @include style-text;
-  @apply text-dark text-4xl;
+  @apply text-4xl;
 }
-
+h2 {
+  @include style-text;
+  @apply text-3xl pb-4;
+}
+p {
+  @apply text-xl pb-2;
+}
+section {
+  @apply py-10;
+}
 .content {
-  @apply px-2 sm:px-4 md:px-10 lg:container lg:px-0;
+  @apply px-2 sm:px-4 md:px-10 lg:container 2xl:px-0;
 }
 
 .row {
