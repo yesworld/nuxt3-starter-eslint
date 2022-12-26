@@ -7,10 +7,10 @@ Content-Type: application/json
   "password": "{{pass}}"
 }
 
-> {% client.global.set("token", response.body.JWT); %}
+> {% client.global.set("token", response.body.data.JWT); %}
 
 ### Get my accont ###
 GET {{host}}/api/auth/me
-Authorization: JWT {{token}}
+//Authorization: JWT {{token}}
 
-> {% client.global.set("profile", response.body.profile); %}
+> {% client.global.set("profile", response.body.data.profile); %}
