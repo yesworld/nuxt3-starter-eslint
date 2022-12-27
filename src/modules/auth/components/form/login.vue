@@ -58,7 +58,6 @@
 </template>
 
 <script setup>
-import { useFetch } from 'nuxt/app'
 import { email, required } from '@vuelidate/validators'
 import { useVuelidate } from '@vuelidate/core'
 import useAuthStore from '@/modules/auth/stores/auth'
@@ -92,22 +91,16 @@ const handleSubmit = async (isFormValid) => {
     return
   }
 
-  const { data, error } = await useFetch('/api/auth/login', {
-    initialCache: false,
-    method: 'post',
-    body: toRaw(formData),
-  })
+  const { data, error } = await sendLoginRequest(toRaw(formData))
 
-  if (error.value) {
+  if (error) {
     alert('Error Auth')
     // eslint-disable-next-line no-console
-    console.log(error.value)
-
+    console.log('Error Auth:', error, error.value)
     return
   }
 
-  // console.log(data.value.data.JWT, pending, error, refresh, toRaw(formData))
-  const token = data.value.data?.JWT
+  const token = data?.JWT
 
   if (token) {
     authStore.setToken(token)

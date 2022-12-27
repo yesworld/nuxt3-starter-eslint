@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { useNuxtApp } from 'nuxt/app'
 
 type IAuthState = {
   loggedIn: boolean
@@ -33,6 +34,7 @@ const useAuthStore = defineStore<string, IAuthState, IAuthGetters, IAuthActions>
     setToken(jwt) {
       this.jwt = jwt
       localStorage.setItem(KEY_AUTH_LOCALSTORAGE, this.jwt)
+      useNuxtApp().$http.setJwt(jwt)
     },
     // async login() {
     //   try {
