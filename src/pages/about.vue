@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import { useMouse } from '@vueuse/core'
-import { useCounterStore } from '@/stores/counter'
+import useCounterStore from '@/stores/counter'
 
 const config = useRuntimeConfig()
 const { data } = await useFetch('/api/version', {
