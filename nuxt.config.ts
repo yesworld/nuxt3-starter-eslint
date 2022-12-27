@@ -13,6 +13,7 @@ export default defineNuxtConfig({
 
     // Custom modules
     './src/modules/common',
+    './src/modules/auth',
     './src/modules/card',
   ],
   css: [

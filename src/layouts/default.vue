@@ -1,8 +1,7 @@
 <template>
-  <div>
+  <div class="pt-20">
     <div class="content">
       <slot />
     </div>
-    <footer>The footer</footer>
   </div>
 </template>

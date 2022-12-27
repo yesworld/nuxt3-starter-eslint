@@ -2,7 +2,7 @@ import { H3Event } from 'h3'
 
 interface IResponse {
   code: number
-  message: string
+  message?: string
   data: any
 }
 
@@ -21,7 +21,6 @@ export default defineEventHandler(async (event: H3Event): Promise<IResponse> => 
 
   return {
     code: 200,
-    message: 'ok',
     data: {
       JWT:
         // eslint-disable-next-line max-len
