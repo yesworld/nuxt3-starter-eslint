@@ -7,16 +7,22 @@ export const sendLoginRequest = async (body: IFormLogin): Promise<any> => {
   const httpClient = useNuxtApp().$http as ApiService
 
   try {
-    return await httpClient.$api('/api/auth/login', {
+    const res = await httpClient.$api('/api/auth/login', {
       initialCache: false,
       method: 'post',
       body,
     } as FetchOptions)
+
+    return {
+      status: 200,
+      error: null,
+      data: res.token,
+    }
   } catch (err: any) {
-    // TODO: Обработать ошибки
     return {
       status: err.response.status,
-      data: err.response.statusText || 'Error auth',
+      error: err.response.statusText || 'Error auth',
+      data: null,
     }
   }
 }

@@ -91,22 +91,22 @@ const handleSubmit = async (isFormValid) => {
     return
   }
 
-  const { data, error } = await sendLoginRequest(toRaw(formData))
+  const { data: token, error } = await sendLoginRequest(toRaw(formData))
 
   if (error) {
-    alert('Error Auth')
+    alert(`${error}: Wrong login or password`)
     // eslint-disable-next-line no-console
-    console.log('Error Auth:', error, error.value)
+    console.log('Error Auth:', error)
+    resetForm()
     return
   }
-
-  const token = data?.JWT
 
   if (token) {
     authStore.setToken(token)
   }
 
-  resetForm()
+  const router = useRouter()
+  router.push('/')
 }
 </script>
 
