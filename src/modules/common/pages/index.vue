@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-page">
     <section class="main">
       <div class="content py-20 md:py-0">
         <div class="row">
@@ -65,6 +65,11 @@ useHead({
 
 <style lang="scss">
 @import '@/assets/variable.scss';
+
+// TODO: Костыль, если перейти на /login, то лейаут не верно работает. Один накладывает на другой.
+.main-page {
+  margin-top: -5rem;
+}
 
 .main {
   height: 100vh;

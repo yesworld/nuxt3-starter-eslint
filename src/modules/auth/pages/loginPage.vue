@@ -19,7 +19,7 @@ useHead({
   title: 'Login',
 })
 definePageMeta({
-  // middleware: 'guest',
+  middleware: 'guest',
 })
 // const { handleSubmit } = useForm({
 //   validationSchema: object({

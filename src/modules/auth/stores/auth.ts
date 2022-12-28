@@ -11,6 +11,7 @@ type IAuthGetters = {
 }
 type IAuthActions = {
   // login: () => Promise<void>
+  logout: () => void
   setToken: (jwt: string) => void
 }
 
@@ -32,8 +33,13 @@ const useAuthStore = defineStore<string, IAuthState, IAuthGetters, IAuthActions>
   actions: {
     setToken(jwt) {
       this.jwt = jwt
-      localStorage.setItem(KEY_AUTH_LOCALSTORAGE, this.jwt)
       this.loggedIn = jwt !== ''
+      localStorage.setItem(KEY_AUTH_LOCALSTORAGE, this.jwt)
+    },
+    logout() {
+      this.jwt = ''
+      this.loggedIn = false
+      localStorage.removeItem(KEY_AUTH_LOCALSTORAGE)
     },
     // async login() {
     //   try {
