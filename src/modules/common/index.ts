@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { defineNuxtModule } from '@nuxt/kit'
+import { addPlugin, defineNuxtModule } from '@nuxt/kit'
 
 export default defineNuxtModule({
   // Default configuration options for your module
@@ -21,5 +21,15 @@ export default defineNuxtModule({
         path: resolve(__dirname, './components'),
       })
     },
+  },
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  setup(options, nuxt) {
+    // Add composables
+    nuxt.hook('imports:dirs', (dirs: string[]) => {
+      dirs.push(resolve(__dirname, './composables'))
+    })
+
+    addPlugin(resolve(__dirname, './plugins/primevue.ts'))
   },
 })

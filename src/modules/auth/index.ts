@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { defineNuxtModule } from '@nuxt/kit'
+import { addPlugin, defineNuxtModule } from '@nuxt/kit'
 
 export default defineNuxtModule({
   // Default configuration options for your module
@@ -28,5 +28,7 @@ export default defineNuxtModule({
     nuxt.hook('imports:dirs', (dirs: string[]) => {
       dirs.push(resolve(__dirname, './composables'))
     })
+
+    addPlugin(resolve(__dirname, './plugins/api.client.ts'))
   },
 })
