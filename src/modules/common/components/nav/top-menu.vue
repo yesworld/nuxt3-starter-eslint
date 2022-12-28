@@ -11,9 +11,7 @@
       <div class="flex items-center justify-center">
         <NuxtLink to="/" class="mr-5">Home</NuxtLink>
         <NuxtLink to="/about" class="mr-5">About</NuxtLink>
-        <NuxtLink to="/login">
-          <Button class="p-button-success">Login</Button>
-        </NuxtLink>
+        <BtnSinginUp />
       </div>
     </nav>
   </div>
