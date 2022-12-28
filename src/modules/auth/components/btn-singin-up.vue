@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <ClientOnly>
     <NuxtLink v-if="!authStore.loggedIn" to="/login">
       <Button class="p-button-success">Login</Button>
     </NuxtLink>
     <NuxtLink v-else to="/logout">
       <Button class="p-button-success">Logout</Button>
     </NuxtLink>
-  </div>
+  </ClientOnly>
 </template>
 
 <script lang="ts" setup>

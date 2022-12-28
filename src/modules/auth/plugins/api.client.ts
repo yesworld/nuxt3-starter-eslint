@@ -1,6 +1,6 @@
 import { defineNuxtPlugin } from '#app'
 import ApiService from '@/modules/auth/apiService'
-import useAuthStore, { KEY_AUTH_LOCALSTORAGE } from '~/modules/auth/stores/auth'
+import useAuthStore, { KEY_AUTH_LOCALSTORAGE } from '@/modules/auth/stores/auth'
 
 declare module '#app' {
   interface NuxtApp {
