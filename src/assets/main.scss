@@ -36,6 +36,9 @@ hr {
   border-top-width: 10px;
   width: 35%;
 }
+.section-smoke {
+  @apply bg-smoke dark:bg-smoke/10;
+}
 
 /* Modal */
 .modal {

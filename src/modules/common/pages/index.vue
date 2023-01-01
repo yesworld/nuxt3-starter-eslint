@@ -18,7 +18,7 @@
       </div>
     </section>
 
-    <section class="bg-smoke dark:bg-smoke/10" style="">
+    <section class="section-smoke" style="">
       <div class="content">
         <h2>Learn with KinikCards</h2>
         <ul>
@@ -43,7 +43,7 @@
       </div>
     </section>
 
-    <section class="bg-smoke dark:bg-smoke/10" style="min-height: 500px">
+    <section class="section-smoke" style="min-height: 500px">
       <div class="content">
         <h2>KinikCards spaced repetition method</h2>
         <img src="/temp/img.png" class="w-full" alt="" />
