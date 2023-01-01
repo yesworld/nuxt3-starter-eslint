@@ -7,14 +7,12 @@ export default class ApiService {
     Accept: 'application/json, text/plain, */*',
   }
 
+  // @ts-ignore
   public $api: $Fetch
 
   constructor(apiBase: string) {
     this.apiBase = apiBase
-    this.$api = $fetch.create({
-      baseURL: this.apiBase,
-      headers: this.defaultHeaders,
-    })
+    this.init()
   }
 
   setJwt(jwt: string) {
@@ -24,6 +22,13 @@ export default class ApiService {
         ...this.defaultHeaders,
         Authorization: `Bearer ${jwt}`,
       },
+    })
+  }
+
+  init() {
+    this.$api = $fetch.create({
+      baseURL: this.apiBase,
+      headers: this.defaultHeaders,
     })
   }
 }
