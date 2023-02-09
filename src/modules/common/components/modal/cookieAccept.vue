@@ -6,7 +6,7 @@
         repeat visits. By clicking "Accept", you consent to the use of ALL the cookies.
       </p>
 
-      <Button label="Accept" @click="onClick" />
+      <Button label="🍪 Accept" @click="onClick" />
     </div>
   </Teleport>
 </template>

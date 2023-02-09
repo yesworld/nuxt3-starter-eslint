@@ -43,6 +43,6 @@ hr {
 /* Modal */
 .modal {
   @include style-bg;
-  @apply rounded border border-secondary p-4;
+  @apply rounded border border-secondary p-4 border-gray-400 dark:border-smoke/40;
   z-index: 999;
 }
