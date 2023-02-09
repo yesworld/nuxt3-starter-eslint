@@ -1,4 +1,3 @@
-import { useNuxtApp } from 'nuxt/app'
 import { FetchOptions } from 'ohmyfetch'
 import ApiService from '@/modules/auth/apiService'
 import { IFormLogin } from '@/modules/auth/types'

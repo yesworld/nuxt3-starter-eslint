@@ -1,5 +1,3 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
-import { defineNuxtConfig } from 'nuxt'
 import viteCompression from 'vite-plugin-compression'
 import config from './src/config/env.config'
 

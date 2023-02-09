@@ -15,12 +15,13 @@
 </template>
 
 <script lang="ts" setup>
-useHead({
-  title: 'Login',
-})
 definePageMeta({
   middleware: 'guest',
 })
+useHead({
+  title: 'Login',
+})
+
 // const { handleSubmit } = useForm({
 //   validationSchema: object({
 //     email: string().required().email().label('Email'),

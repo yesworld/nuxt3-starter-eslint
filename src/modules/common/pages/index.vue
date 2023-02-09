@@ -68,7 +68,7 @@ useHead({
 
 // TODO: Костыль, если перейти на /login, то лейаут не верно работает. Один накладывает на другой.
 .main-page {
-  margin-top: -5rem;
+  margin-top: -3.5rem;
 }
 
 .main {

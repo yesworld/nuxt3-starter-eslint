@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavTopMenu />
-    <NuxtLayout style="padding-top: 5rem">
+    <NuxtLayout class="pt-14">
       <NuxtPage />
     </NuxtLayout>
 

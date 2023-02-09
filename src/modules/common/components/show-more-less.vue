@@ -48,7 +48,7 @@ const onClick = () => {
   }
 
   .text:before {
-    @apply dark:from-dirty bg-gradient-to-t from-white;
+    @apply bg-gradient-to-t from-white;
     content: '';
     position: absolute;
     left: 0;
