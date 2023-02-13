@@ -18,7 +18,13 @@
       </div>
     </section>
 
-    <section class="section-smoke" style="">
+    <section>
+      <div class="content">
+        <CarouselLogos />
+      </div>
+    </section>
+
+    <section class="section-smoke">
       <div class="content">
         <h2>Learn with KinikCards</h2>
         <ul>

@@ -7,12 +7,14 @@ import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
 import Password from 'primevue/password'
 import Divider from 'primevue/divider'
+import Carousel from 'primevue/carousel'
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(PrimeVue, { ripple: true })
   nuxtApp.vueApp.use(ToastService)
   nuxtApp.vueApp.component('Toast', Toast)
   nuxtApp.vueApp.component('Galleria', Galleria)
+  nuxtApp.vueApp.component('Carousel', Carousel)
   nuxtApp.vueApp.component('Button', Button)
   nuxtApp.vueApp.component('InputText', InputText)
 
