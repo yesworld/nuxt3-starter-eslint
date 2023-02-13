@@ -1,4 +1,4 @@
-import { $Fetch, $fetch } from 'ohmyfetch'
+import { $Fetch, $fetch } from 'ofetch'
 
 export default class ApiService {
   private apiBase: string
