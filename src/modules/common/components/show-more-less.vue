@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 const isOpened = ref(false)
-const $text = ref(null)
+const $text = ref<HTMLBaseElement | null>(null)
 
 defineProps({
   maxheight: {
