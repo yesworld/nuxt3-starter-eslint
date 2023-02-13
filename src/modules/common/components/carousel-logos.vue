@@ -5,10 +5,11 @@
     :num-visible="6"
     :responsive-options="responsiveOptions"
     :show-indicators="false"
+    :circular="true"
   >
     <template #item="slotProps">
       <div class="px-4">
-        <img :src="slotProps.data.src" :alt="slotProps.data.alt" />
+        <img class="max-h-40" :src="slotProps.data.src" :alt="slotProps.data.alt" />
       </div>
     </template>
   </Carousel>
@@ -43,24 +44,28 @@ const images = ref([
     alt: 'logo Php',
   },
   {
-    src: '/logos/PHP.svg',
-    alt: 'logo Php',
+    src: '/logos/MySQL.svg',
+    alt: 'logo MySQL',
   },
   {
-    src: '/logos/PHP.svg',
-    alt: 'logo Php',
+    src: '/logos/Javascript.svg',
+    alt: 'logo Javascript',
   },
   {
-    src: '/logos/PHP.svg',
-    alt: 'logo Php',
+    src: '/logos/Typescript.svg',
+    alt: 'logo Typescript',
   },
   {
-    src: '/logos/PHP.svg',
-    alt: 'logo Php',
+    src: '/logos/CSS.3.svg',
+    alt: 'logo CSS',
   },
   {
-    src: '/logos/PHP.svg',
-    alt: 'logo Php',
+    src: '/logos/github.svg',
+    alt: 'logo Github',
+  },
+  {
+    src: '/logos/Vue.svg',
+    alt: 'logo Vue',
   },
 ])
 
@@ -70,4 +75,13 @@ const images = ref([
 // }))
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.carousel-logos .p-carousel-items-container {
+  align-items: center;
+
+  .p-carousel-item > div {
+    display: flex;
+    justify-content: center;
+  }
+}
+</style>
