@@ -16,4 +16,12 @@ export default {
     telephone: '+7 999 140-00-00',
     contactType: 'Customer service',
   },
+  breakpoints: {
+    xs: '320px',
+    sm: '640px',
+    md: '768px',
+    lg: '1024px',
+    xl: '1280px',
+    '2xl': '1536px',
+  },
 }

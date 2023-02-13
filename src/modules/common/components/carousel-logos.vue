@@ -15,19 +15,25 @@
 </template>
 
 <script lang="ts" setup>
+import { CarouselResponsiveOptions } from 'primevue/carousel'
+import config from '@/config/env.config'
 // const $img = useImage()
-const responsiveOptions = ref([
+
+const responsiveOptions = ref<CarouselResponsiveOptions[]>([
   {
-    breakpoint: '1024px',
+    breakpoint: config.breakpoints.lg,
     numVisible: 4,
+    numScroll: 1,
   },
   {
-    breakpoint: '640px',
+    breakpoint: config.breakpoints.sm,
     numVisible: 2,
+    numScroll: 1,
   },
   {
-    breakpoint: '320px',
+    breakpoint: config.breakpoints.xs,
     numVisible: 1,
+    numScroll: 1,
   },
 ])
 
