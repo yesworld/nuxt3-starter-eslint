@@ -26,6 +26,23 @@
 
     <section class="section-smoke">
       <div class="content">
+        <h2 class="text-center">Самые популярные темы</h2>
+        <hr class="small text-center" />
+        <ul>
+          <li>Discover 100500 cards from our library</li>
+          <li>Explore 222 categories (from algebra to vexillology)</li>
+          <li>Import, export, customize your cards</li>
+          <li>Learn everywhere on any device</li>
+          <li>Create your own cards and stacks</li>
+          <li>Review your progress and statistics</li>
+          <li>Be your own teacher, challenge yourself</li>
+          <li>Based on Leitner System, empowered with AI</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="content">
         <h2>Learn with KinikCards</h2>
         <ul>
           <li>Discover 100500 cards from our library</li>

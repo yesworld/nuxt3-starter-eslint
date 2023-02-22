@@ -35,6 +35,12 @@ hr {
   @apply border-fourth my-10;
   border-top-width: 10px;
   width: 35%;
+
+  &.small {
+    margin: 0.8rem auto 1.4rem;
+    width: 10%;
+    border-top-width: 5px;
+  }
 }
 .section-smoke {
   @apply bg-smoke dark:bg-smoke/10;
