@@ -9,7 +9,7 @@
   >
     <template #item="slotProps">
       <div class="px-4">
-        <img class="max-h-40" :src="slotProps.data.src" :alt="slotProps.data.alt" />
+        <img class="max-h-32" :src="slotProps.data.src" :alt="slotProps.data.alt" />
       </div>
     </template>
   </Carousel>
