@@ -1,4 +1,4 @@
-import { FetchOptions } from 'ohmyfetch'
+import { FetchOptions } from 'ofetch'
 import ApiService from '@/modules/auth/apiService'
 import { IFormLogin } from '@/modules/auth/types'
 
