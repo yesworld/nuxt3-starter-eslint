@@ -7,7 +7,7 @@ type IAuthState = {
 }
 type IAuthGetters = {
   isLoggedIn: (state: IAuthState) => boolean
-  getToken: (state: IAuthState) => string
+  token: (state: IAuthState) => string
 }
 type IAuthActions = {
   // login: () => Promise<void>
@@ -26,7 +26,7 @@ const useAuthStore = defineStore<string, IAuthState, IAuthGetters, IAuthActions>
     isLoggedIn(state: IAuthState): boolean {
       return state.loggedIn
     },
-    getToken(state: IAuthState) {
+    token(state: IAuthState) {
       return state.jwt
     },
   },

@@ -1,12 +1,9 @@
 import { FetchOptions } from 'ofetch'
-import ApiService from '@/modules/auth/apiService'
 import { IFormLogin } from '@/modules/auth/types'
 
 export const sendLoginRequest = async (body: IFormLogin): Promise<any> => {
-  const httpClient = useNuxtApp().$http as ApiService
-
   try {
-    const res = await httpClient.$api('/api/auth/login', {
+    const res = await useNuxtApp().$api('/api/auth/login', {
       initialCache: false,
       method: 'post',
       body,

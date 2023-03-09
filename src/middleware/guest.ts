@@ -5,7 +5,6 @@ export default defineNuxtRouteMiddleware(() => {
   const auth = useAuthStore()
 
   if (auth.isLoggedIn) {
-    const router = useRouter()
-    return router.push('/')
+    return useRouter().push('/')
   }
 })
