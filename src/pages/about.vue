@@ -5,7 +5,8 @@
     <button @click="counterStore.decrement">-</button>
     <div>Mouse position x = {{ x }}, y = {{ y }}</div>
 
-    <div>{{ data }}</div>
+    <div>Version: {{ dataServer.version }}</div>
+    <div>Status: {{ dataClient.status }}</div>
   </div>
 </template>
 
@@ -13,12 +14,14 @@
 import { useMouse } from '@vueuse/core'
 import useCounterStore from '@/stores/counter'
 
-const config = useRuntimeConfig()
-const { data } = await useFetch('/api/version', {
-  baseURL: config.public.apiBase,
-  server: false,
-})
-
 const { x, y } = useMouse()
 const counterStore = useCounterStore()
+
+// server req
+const { data: dataServer } = await useAsyncData(() => {
+  return useNuxtApp().$api('/api/version')
+})
+
+// client req
+const dataClient = await useNuxtApp().$api('/api/version')
 </script>
