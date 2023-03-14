@@ -29,6 +29,6 @@ export default defineNuxtModule({
       dirs.push(resolve(__dirname, './composables'))
     })
 
-    addPlugin(resolve(__dirname, './plugins/api.ts'))
+    addPlugin(resolve(__dirname, './plugins/auth.ts'))
   },
 })

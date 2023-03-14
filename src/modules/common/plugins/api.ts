@@ -1,6 +1,6 @@
 import { defineNuxtPlugin } from '#app'
 import { FetchContext } from 'ofetch'
-import useAuthStore, { KEY_AUTH_LOCALSTORAGE } from '@/modules/auth/stores/auth'
+import useAuthStore from '@/modules/auth/stores/auth'
 
 declare module '#app' {
   interface NuxtApp {
@@ -15,14 +15,6 @@ export default defineNuxtPlugin((nuxtApp) => {
     throw new Error('NUXT_PUBLIC_API_BASE is not defined')
   }
 
-  const authStore = useAuthStore()
-  if (process.client) {
-    const jwt = localStorage.getItem(KEY_AUTH_LOCALSTORAGE)
-    if (jwt) {
-      authStore.setToken(jwt)
-    }
-  }
-
   const api = $fetch.create({
     baseURL: apiBase,
     headers: {
@@ -31,7 +23,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       // Authorization: `Bearer ${jwt}`,
     },
     onRequest({ options }) {
-      // console.log('onRequest', process.server, process.client)
+      const authStore = useAuthStore()
       if (authStore.isLoggedIn) {
         // @ts-ignore
         options.headers.Authorization = `Bearer ${authStore.token}`
