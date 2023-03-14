@@ -12,6 +12,11 @@ export default defineNuxtModule({
         path: '/login',
         file: resolve(__dirname, './pages/loginPage.vue'),
       })
+      pages.push({
+        name: 'logout',
+        path: '/logout',
+        file: resolve(__dirname, './pages/logoutPage.vue'),
+      })
     },
 
     // COMPONENTS
