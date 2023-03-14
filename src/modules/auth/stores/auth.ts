@@ -6,7 +6,7 @@ type IAuthState = {
   jwt: string
 }
 type IAuthGetters = {
-  isLoggedIn: (state: IAuthState) => boolean
+  isLoggedIn: () => boolean
   token: (state: IAuthState) => string
 }
 type IAuthActions = {
@@ -23,8 +23,12 @@ const useAuthStore = defineStore<string, IAuthState, IAuthGetters, IAuthActions>
     user: undefined,
   }),
   getters: {
-    isLoggedIn(state: IAuthState): boolean {
-      return state.loggedIn
+    isLoggedIn(): boolean {
+      if (process.client) {
+        return !!localStorage.getItem(KEY_AUTH_LOCALSTORAGE)
+      }
+
+      return false
     },
     token(state: IAuthState) {
       return state.jwt
@@ -39,7 +43,10 @@ const useAuthStore = defineStore<string, IAuthState, IAuthGetters, IAuthActions>
     logout() {
       this.jwt = ''
       this.loggedIn = false
-      localStorage.removeItem(KEY_AUTH_LOCALSTORAGE)
+
+      if (process.client) {
+        localStorage.removeItem(KEY_AUTH_LOCALSTORAGE)
+      }
     },
     // async login() {
     //   try {
