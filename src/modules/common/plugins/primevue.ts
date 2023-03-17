@@ -8,6 +8,7 @@ import InputText from 'primevue/inputtext'
 import Password from 'primevue/password'
 import Divider from 'primevue/divider'
 import Carousel from 'primevue/carousel'
+import Breadcrumb from 'primevue/breadcrumb'
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(PrimeVue, { ripple: true })
@@ -17,6 +18,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.component('Carousel', Carousel)
   nuxtApp.vueApp.component('Button', Button)
   nuxtApp.vueApp.component('InputText', InputText)
+  nuxtApp.vueApp.component('Breadcrumb', Breadcrumb)
 
   /**
    * TODO: add autocomplete="on" attribute for Password component
